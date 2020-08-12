@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+             xmlns:local="clr-namespace:MemoryAllocationTest.Helpers"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MemoryAllocationTest.Views.XFImagePage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        <StackLayout
+            Padding="20"
+            Spacing="20">
+            <Label 
+                Text="Xamarin Forms Image doesn't cause page to be retained."
+                FontSize="20"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Image
+                Style="{StaticResource XFImageStyle}"/>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

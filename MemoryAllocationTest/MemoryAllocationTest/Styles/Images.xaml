@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<ResourceDictionary
+    x:Class="MemoryAllocationTest.Styles.Images"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:local="clr-namespace:MemoryAllocationTest.Helpers">
+
+    <Style TargetType="Image" x:Key="XFImageStyle">
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="HeightRequest" Value="150"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Source" Value="{local:ImageResource MemoryAllocationTest.Assets.icon.png}"/>
+    </Style>
+
+    <Style TargetType="f9p:Image" x:Key="F9PImageStyle">
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="HeightRequest" Value="150"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Source" Value="{local:ImageMultiResource MemoryAllocationTest.Assets.icon.png}"/>
+    </Style>
+</ResourceDictionary> 
