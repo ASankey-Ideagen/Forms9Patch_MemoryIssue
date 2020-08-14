@@ -33,6 +33,13 @@ namespace MemoryAllocationTest.Views
             GC.Collect();
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+
+        }
+
         async void OnStandardXFImageButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new XFImagePage(new XFImageViewModel()));
@@ -43,14 +50,25 @@ namespace MemoryAllocationTest.Views
             await Navigation.PushAsync(new F9PImagePage(new F9PImageViewModel()));
         }
 
-        //async void OnUsingF9PMultiResourceButtonClicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new UseF9PMultiResourcePage(new UseF9PMultiResourceViewModel()));
-        //}
+        async void OnCollectionViewButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CollectionViewPage(new CollectionViewViewModel()));
+        }
 
-        //async void OnUsingStylesAndF9PButtonClicked(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new F9PImagePage(new F9PImageViewModel()));
-        //}
+        async void OnFFImageLoadingButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FFImagePage(new FFImageViewModel()));
+        }
+
+        async void OnFFImageCollectionViewButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new FFImageCollectionViewPage(new FFImageCollectionViewViewModel()));
+        }
+
+        async void OnIconFontImageButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new IconFontImagePage(new IconFontImageViewModel()));
+        }
+
     }
 }

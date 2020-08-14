@@ -1,26 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<views:DisposableContentPage 
+<views:DisposableContentPage
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
     xmlns:views="clr-namespace:MemoryAllocationTest.Views"
-    x:Class="MemoryAllocationTest.Views.F9PImagePage"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+    x:Class="MemoryAllocationTest.Views.FFImagePage"
     Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout
             Padding="20"
             Spacing="20">
             <Label 
-                Text="Forms9Patch Image causing page to be retained."
+                Text="FFImageLoading Image."
                 FontSize="20"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <StackLayout>
-                <f9p:Image
-                    x:Name="F9PImage"
-                    Style="{StaticResource F9PImageStyle}"/>
-            </StackLayout>
+            <ffimageloadingsvg:SvgCachedImage
+                Style="{StaticResource FFImageSVGStyle}"/>
+
+            <ffimageloading:CachedImage
+                Style="{StaticResource FFImageStyle}"/>
 
         </StackLayout>
     </ContentPage.Content>

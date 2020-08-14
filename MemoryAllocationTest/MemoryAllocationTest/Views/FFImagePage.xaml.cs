@@ -1,16 +1,14 @@
 ﻿using MemoryAllocationTest.ViewModels;
-
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MemoryAllocationTest.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class XFImagePage : DisposableContentPage
+    public partial class FFImagePage : DisposableContentPage
     {
-        XFImageViewModel viewModel;
+        FFImageViewModel viewModel;
 
-        public XFImagePage(XFImageViewModel viewModel)
+        public FFImagePage(FFImageViewModel viewModel)
         {
             InitializeComponent();
 

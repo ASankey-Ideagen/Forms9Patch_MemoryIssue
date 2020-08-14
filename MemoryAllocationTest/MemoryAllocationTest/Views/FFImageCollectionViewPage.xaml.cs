@@ -11,11 +11,11 @@ using Xamarin.Forms.Xaml;
 namespace MemoryAllocationTest.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class F9PImagePage : DisposableContentPage
+    public partial class FFImageCollectionViewPage : DisposableContentPage
     {
-        F9PImageViewModel viewModel;
-        
-        public F9PImagePage(F9PImageViewModel viewModel)
+        FFImageCollectionViewViewModel viewModel;
+
+        public FFImageCollectionViewPage(FFImageCollectionViewViewModel viewModel)
         {
             InitializeComponent();
 

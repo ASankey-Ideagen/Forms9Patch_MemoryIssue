@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<views:DisposableContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:views="clr-namespace:MemoryAllocationTest.Views"
+    x:Class="MemoryAllocationTest.Views.CollectionViewPage"
+    Title="{Binding Title}">
+    <ContentPage.Content>
+        <CollectionView
+            x:Name="ItemCollection"
+            ItemsSource="{Binding Items}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Padding="10">
+                        <Label
+                            Text="F9P Image within a CollectionView"
+                            VerticalOptions="Center"/>
+                        <f9p:Image
+                            Style="{StaticResource F9PImageStyle}"
+                            HeightRequest="50"
+                            WidthRequest="50"/>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</views:DisposableContentPage>

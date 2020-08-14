@@ -8,6 +8,7 @@ namespace MemoryAllocationTest
 {
     public partial class App : Application
     {
+        public bool IsF9PImageDisposalEnabled = false;
 
         public App()
         {

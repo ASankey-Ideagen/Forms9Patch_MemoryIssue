@@ -2,26 +2,21 @@
 <views:DisposableContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
     xmlns:views="clr-namespace:MemoryAllocationTest.Views"
-    x:Class="MemoryAllocationTest.Views.F9PImagePage"
+    x:Class="MemoryAllocationTest.Views.IconFontImagePage"
     Title="{Binding Title}">
     <ContentPage.Content>
         <StackLayout
             Padding="20"
             Spacing="20">
             <Label 
-                Text="Forms9Patch Image causing page to be retained."
+                Text="Icon Font Image"
                 FontSize="20"
                 VerticalOptions="Start" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <StackLayout>
-                <f9p:Image
-                    x:Name="F9PImage"
-                    Style="{StaticResource F9PImageStyle}"/>
-            </StackLayout>
-
+            <Image 
+                Style="{StaticResource IconFontImageStyle}"/>
         </StackLayout>
     </ContentPage.Content>
 </views:DisposableContentPage>

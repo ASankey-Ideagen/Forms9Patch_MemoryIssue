@@ -4,8 +4,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:f9p="clr-namespace:Forms9Patch;assembly=Forms9Patch"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
     xmlns:local="clr-namespace:MemoryAllocationTest.Helpers">
 
+    <OnPlatform x:Key="IcoMoonFontFamily" x:TypeArguments="x:String">
+        <On Platform="Android" Value="IcoMoon-Free.ttf#IcoMoon-Free" />
+    </OnPlatform>
+    
     <Style TargetType="Image" x:Key="XFImageStyle">
         <Setter Property="WidthRequest" Value="150"/>
         <Setter Property="HeightRequest" Value="150"/>
@@ -21,4 +27,37 @@
         <Setter Property="HorizontalOptions" Value="Center"/>
         <Setter Property="Source" Value="{local:ImageMultiResource MemoryAllocationTest.Assets.icon.png}"/>
     </Style>
+
+    <Style TargetType="ffimageloading:CachedImage" x:Key="FFImageStyle">
+        <Setter Property="WidthRequest" Value="150"/>
+        <Setter Property="HeightRequest" Value="150"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Source" Value="resource://MemoryAllocationTest.Assets.icon.png"/>
+    </Style>
+
+    <Style TargetType="ffimageloadingsvg:SvgCachedImage" x:Key="FFImageSVGStyle">
+        <Setter Property="WidthRequest" Value="50"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Source" Value="resource://MemoryAllocationTest.Assets.generic_user.svg"/>
+    </Style>
+
+    <Style TargetType="Image" x:Key="IconFontImageStyle">
+        <Setter Property="WidthRequest" Value="75"/>
+        <Setter Property="HeightRequest" Value="75"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+        <Setter Property="HorizontalOptions" Value="Center"/>
+        <Setter Property="Source">
+            <Setter.Value>
+                <FontImageSource
+                    FontFamily="{DynamicResource IcoMoonFontFamily}"
+                    Glyph="&#xe9ca;"
+                    Size="75"
+                    Color="Red"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary> 

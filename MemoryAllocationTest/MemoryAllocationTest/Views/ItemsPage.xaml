@@ -13,6 +13,17 @@
         Spacing="20"
         Padding="16">
 
+        <StackLayout
+            Orientation="Horizontal"
+            Spacing="8">
+            <Label
+                VerticalOptions="Center"
+                Text="Enable Forms9Patch image disposal"/>
+            <Switch 
+                HorizontalOptions="EndAndExpand"
+                IsToggled="{Binding F9PImageDisposalEnabled}"/>
+        </StackLayout>
+
         <Frame
             Padding="8"
             BackgroundColor="PaleGreen">
@@ -28,7 +39,39 @@
                 Text="Forms9Patch Image.&#10;Page and ViewModel retained"
                 Clicked="OnF9PImageButtonClicked"/>
         </Frame>
-        
+
+        <Frame
+            Padding="8"
+            BackgroundColor="IndianRed">
+            <Button
+                Text="Collection View F9P Image&#10;Page and ViewModel retained"
+                Clicked="OnCollectionViewButtonClicked"/>
+        </Frame>
+
+        <Frame
+            Padding="8"
+            BackgroundColor="PaleGreen">
+            <Button
+                Text="FFImageLoading Image"
+                Clicked="OnFFImageLoadingButtonClicked"/>
+        </Frame>
+
+        <Frame
+            Padding="8"
+            BackgroundColor="PaleGreen">
+            <Button
+                Text="Collection View FFImageLoading Image"
+                Clicked="OnFFImageCollectionViewButtonClicked"/>
+        </Frame>
+
+        <Frame
+            Padding="8"
+            BackgroundColor="PaleGreen">
+            <Button
+                Text="Icon Font Image"
+                Clicked="OnIconFontImageButtonClicked"/>
+        </Frame>
+
     </StackLayout>
 
 
